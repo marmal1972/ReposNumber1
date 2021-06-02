@@ -18,7 +18,7 @@ library(dplyr)
 
 mining2 <- mining %>%
  filter(!(YEAR %in% c("1972", "1973", "1974", "1975", "1976", "1977", "1978", 
-"1979"))) %>%
+"1979", "1980"))) %>%
  filter(QTR %in% "4") %>%
  filter(PRO >= 100.4 & PRO <= 118.6) %>%
  filter(POW >= 
@@ -32,7 +32,7 @@ ggplot data viz
 library(ggplot2)
 p <- ggplot(mining2) +
  aes(x = PRO, y = POW) +
- geom_point(size = 1L, colour = "#0c4c8a") +
+ geom_point(size = 2, colour = "#0c4c8a") +
  theme_minimal()
 
 
